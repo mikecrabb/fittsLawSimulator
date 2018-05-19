@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Fitt's Law Simulator</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/main.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <h4>Fitts's Law Simulator</h4>
+          <p>Fitts's law is used to calculate the expected amount of time that should take for to move to a target. The equation used is <strong>t = a + b·log2(d/w)</strong></p>
+          <p>The sliders below can be moved to adjust the average (mean) amount of time that it would take to accuratly travel from the grey box on the left to the box on the right</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <div class="container">
+      <div class="row">
+        <div class="twelve columns">
+          <ul class="fittsLawVariables">
+            <li class="tDescription"><span class="currentVal" id="tVal"></span> t = average completion time of movement</li>
+            <li><input type="range" min="1" max="100" value="50" class="slider" id="a-constant"> <span class="currentVal" id="aVal"></span> a = constant determined by input device (acts to add)</li>
+            <li><input type="range" min="1" max="100" value="50" class="slider" id="b-constant"> <span class="currentVal" id="bVal"></span>b = constand determined by input device (acts as a multiplier)</li>
+            <li><input type="range" min="1" max="750" value="500" class="slider" id="d-distance"> <span class="currentVal" id="dVal"></span>d = distance from starting point to center of the target</li>
+            <li><input type="range" min="1" max="250" value="100" class="slider" id="w-width"> <span class="currentVal" id="wVal"></span>w = width of target (measured along axis of motion)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="twelve columns fittContainer">
+          <div id="startPoint"></div>
+          <div id="fittButton"></div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="two columns offset-by-five">
+        <p>Made by <a href="http://www.mikecrabb.co.uk">Mike</a> </p>
+      </div>
+
+    </div>
+
+  </div>
+</footer>
+
+
+  <script type="text/javascript" src="fittsSim.js"></script>
+
+  </script>
+</body>
+
+</html>
